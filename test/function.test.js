@@ -1,9 +1,6 @@
-const createGrid = require('../functions/board')
 const printBoard = require('../functions/printBoard')
 const placeShip = require('../functions/placeShip')
 
-const directVaild = require('../functions/directVaild')
-const coordVaild = require('../functions/coordVaild')
 const lettersToNum = require('../functions/letterToNum')
 
 const grid = [ [ '-', '-', '-', '-', '-', '-', '-', '-' ],
