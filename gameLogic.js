@@ -23,25 +23,36 @@ let p1Direction = prompt('Point ship: Up? Down? Left? Right?')
 
 //error checking user inputs
 while(p1Error){
-  console.log('running in error checker')
-  p1Error = coordVaild(p1Ship);
-  console.log("from coord", p1Error)
-
-  if(!coordVaild(p1Ship)){
-    p1Error = directVaild(p1Ship, p1Direction);
-    console.log("from direct", p1Error)
+  const coordErr = coordVaild(p1Ship);
+  const directionErr = directVaild(p1Ship, p1Direction);
+  if (coordErr){
+    p1Ship = prompt('Please enter correct coordinates:')
+  } else if (directionErr) {
+    p1Direction = prompt('Cannot place shipoff the board, please try again: Up? Down? Left? Right?')
   }
-  if(p1Error){
-    p1Ship = prompt('Enter Ship Coordinate again(eg. B5):')
-    p1Direction = prompt('Point ship in the correct direction: Up? Down? Left? Right?')
-  };
 
+  if(!coordErr && !directionErr) {
+    p1Error = false;
+  }
 };
 placeShip(p1Ship,p1Direction, p1Board)
 printBoard(p1Board, 'Player 1');
 // console.clear()
 const p2Ship = prompt('Player 2, Enter Ship Coordinate (eg. B5):')
 const p2Direction = prompt('Point ship: Up? Down? Left? Right?')
+while(p2Error){
+  const coordErr = coordVaild(p2Ship);
+  const directionErr = directVaild(p2Ship, p2Direction);
+  if (coordErr){
+    p2Ship = prompt('Please enter correct coordinates:')
+  } else if (directionErr) {
+    p2Direction = prompt('Cannot place shipoff the board, please try again: Up? Down? Left? Right?')
+  }
+
+  if(!coordErr && !directionErr) {
+    p1Error = false;
+  }
+};
 placeShip(p2Ship,p2Direction, p2Board)
 printBoard(p2Board, 'Player 2');
 // console.clear()
