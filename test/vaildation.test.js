@@ -15,4 +15,13 @@ describe('Vaildation functions', () => {
     expect(coordVaild('b5')).toBe(false);
   });
 
+  it('should return true if direction is incorrectly typed in', () => {
+    expect(directVaild('b5', 'middle')).toBe(true);
+  });
+  it('should return true if it cannot place ship in that direction', () => {
+    expect(directVaild('h1', 'right')).toBe(true);
+  });
+  it('should return false if everything is correct', () => {
+    expect(directVaild('h1', 'down')).toBe(false);
+  });
 });
