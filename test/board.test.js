@@ -1,7 +1,7 @@
 const { expect } = require('@jest/globals');
-const createGrid = require('../board')
+const createGrid = require('../functions/board')
 
-describe('createGrid', () => {
+describe('creating the board', () => {
   const expected = [ [ '-', '-', '-', '-', '-', '-', '-', '-' ],
                      [ '-', '-', '-', '-', '-', '-', '-', '-' ],
                      [ '-', '-', '-', '-', '-', '-', '-', '-' ],
@@ -14,4 +14,5 @@ describe('createGrid', () => {
   it('should be an empty starting board', () => {
     expect(actual).toEqual(expected);
   });
+
 });

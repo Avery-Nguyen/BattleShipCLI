@@ -1,5 +1,3 @@
-
-
 function lettersToNum (letter){
   const char = letter.toUpperCase();
   let result = null;
@@ -35,4 +33,4 @@ function lettersToNum (letter){
   return result
 };
 
-
+module.exports = lettersToNum;

@@ -9,6 +9,4 @@ function createGrid () {
   return grid;
 }
 
-const grid = createGrid();
-console.log(grid)
 module.exports = createGrid;
