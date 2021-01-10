@@ -63,7 +63,6 @@ console.clear()
 
 //while loop for game
 // attack other players board
-// printBoard(p2Board, 'Player 1', true)
 while (p1Life > 0 && p2Life > 0){
   //player 1 turn
   printBoard(p2Board, 'Player 1', true);

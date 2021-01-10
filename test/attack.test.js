@@ -12,11 +12,13 @@ describe('Attack Function', () => {
   it('should return true on hits', () => {
 
     const actual = attack('b3', grid)
-    expect(actual).toEqual(true);
+    expect(actual).toBe(true);
   });
   it('should return false on misses', () => {
 
     const actual = attack('a1', grid);
-    expect(actual).toEqual(false);
+    expect(actual).toBe(false);
   });
+
+
 });
