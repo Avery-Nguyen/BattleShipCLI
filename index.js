@@ -37,6 +37,7 @@ while(p1Error){
 };
 placeShip(p1Ship,p1Direction, p1Board)
 printBoard(p1Board, 'Player 1');
+prompt('End turn? (hit enter)')
 console.clear()
 
 printBoard(p2Board, 'Player 2');
@@ -58,6 +59,7 @@ while(p2Error){
 };
 placeShip(p2Ship,p2Direction, p2Board)
 printBoard(p2Board, 'Player 2');
+prompt('End turn? (hit enter)')
 console.clear()
 
 
@@ -73,13 +75,15 @@ while (p1Life > 0 && p2Life > 0){
   if(p2Life <= 0){
     break;
   }
-
+  prompt('End turn? (hit enter)')
+  console.clear()
   //player 2 turn
   printBoard(p1Board, 'Player 2', true);
   let p2attack = prompt ('Player 2: Enter Attack Coordinate')
   if(attack(p2attack,p1Board)){
     p1Life--;
   }
+  prompt('End turn? (hit enter)')
 console.clear()
 }
 console.clear()
