@@ -1,5 +1,6 @@
 const letterToNum = require('./letterToNum')
 
+// places 3x1 ship based onto the player's board based off the player's input of direction and coordinate.
 function placeShip(coord,direction, grid){
   let x = null; //horizontal
   let y = null; //vertical

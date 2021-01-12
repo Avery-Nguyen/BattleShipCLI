@@ -35,15 +35,19 @@ while(p1Error){
     p1Error = false;
   }
 };
+
+//once all errors are resolved, up player's board
 placeShip(p1Ship,p1Direction, p1Board)
 printBoard(p1Board, 'Player 1');
 prompt('End turn? (hit enter)')
 console.clear()
 
+//player's 2 turn
 printBoard(p2Board, 'Player 2');
 const p2Ship = prompt('Player 2, Enter Ship Coordinate (eg. B5):')
 const p2Direction = prompt('Point ship: Up? Down? Left? Right?')
 
+//error checking user inputs
 while(p2Error){
   const coordErr = coordVaild(p2Ship);
   const directionErr = directVaild(p2Ship, p2Direction);
@@ -57,6 +61,7 @@ while(p2Error){
     p2Error = false;
   }
 };
+//once all errors are resolved, up player's board
 placeShip(p2Ship,p2Direction, p2Board)
 printBoard(p2Board, 'Player 2');
 prompt('End turn? (hit enter)')
@@ -64,7 +69,7 @@ console.clear()
 
 
 //while loop for game
-// attack other players board
+//attack other players board
 while (p1Life > 0 && p2Life > 0){
   //player 1 turn
   printBoard(p2Board, 'Player 1', true);
@@ -86,6 +91,8 @@ while (p1Life > 0 && p2Life > 0){
   prompt('End turn? (hit enter)')
 console.clear()
 }
+
+//once a player's life hits 0, ends game and annouces winner
 console.clear()
 if (p1Life === 0){
   console.log('You Sunk Player 1\'s Battleship')

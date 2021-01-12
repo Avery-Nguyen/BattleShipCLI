@@ -1,5 +1,8 @@
 const letterToNum = require('./letterToNum')
 
+//checks to make sure only the 4 allowed directions are used as inputs, returns true if not.
+//Will also check to make sure it won't place the ship off the board.
+
 function directVaild(coord, direction){
   const orientation = direction.toUpperCase();
 

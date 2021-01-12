@@ -1,3 +1,5 @@
+//checks to see if user inputs is in the coorect format (eg. B5), returns true if there are any errors
+
 function coordVaild(coord){
   if((coord.length < 0) || (coord.length > 2)){
     return true;

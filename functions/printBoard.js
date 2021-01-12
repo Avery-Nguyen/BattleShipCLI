@@ -1,3 +1,5 @@
+//prints board onto the console (adding lables to the sides), and hides enemy ship during gameplay
+
 const printBoard = (grid, player, enemyBoard = false) => {
   console.log(`~~~~~~~~~~~${player}~~~~~~~~~~~`)
   const header = '   A  B  C  D  E  F  G  H'

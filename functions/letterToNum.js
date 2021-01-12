@@ -1,3 +1,5 @@
+//converts letters into index numbers
+
 function lettersToNum (letter){
   const char = letter.toUpperCase();
   let result = null;
